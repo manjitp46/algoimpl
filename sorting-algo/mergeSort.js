@@ -1,8 +1,8 @@
 function split(data, l, r) {
   if (l < r) {
     var middle = Math.floor((l + r) / 2);
-    var left = split(data, l, middle);
-    var right = split(data, middle + 1, r);
+      split(data, l, middle);
+     split(data, middle + 1, r);
     // console.log(left,right);
     merge(arr, l, middle, r);
   }
