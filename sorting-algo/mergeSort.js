@@ -1,8 +1,9 @@
 function split(data, l, r) {
   if (l < r) {
     var middle = Math.floor((l + r) / 2);
-    split(data, l, middle);
-    split(data, middle + 1, r);
+    var left = split(data, l, middle);
+    var right = split(data, middle + 1, r);
+    // console.log(left,right);
     merge(arr, l, middle, r);
   }
 
@@ -49,7 +50,7 @@ function merge(arr, l, m, r) {
 }
 
 var arr = new Array();
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 5; i++) {
   arr[i] = Math.floor(Math.random() * 100);
 }
 

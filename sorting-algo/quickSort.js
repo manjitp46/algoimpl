@@ -1,4 +1,4 @@
-function quickSort(arr, low, high) {  
+var quickSort = function (arr, low, high) {  
   if(low<=high){
     var pivot = partition(arr, low, high);
     quickSort(arr,low,pivot-1);
@@ -17,24 +17,28 @@ function partition(arr, low, high) {
       pIndex++;
     }
   }
- var temp = arr[high];
+  //placing pivot element to currect position
   arr[high] = arr[pIndex];
-  arr[pIndex] = temp;
+  arr[pIndex] = pivot;
+  // console.log(arr);
   return pIndex;
 }
 
 var arr = new Array();
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 5; i++) {
 
   arr[i] = Math.floor(Math.random() * 100);
 }
 
-console.log("Before Sorting");
-console.log("-------------------------------------------------------------------------------");
-console.log(arr);
-console.log("---------------------------------------------------------------------------------");
-quickSort(arr, 0, arr.length - 1);
-console.log("After Sorting");
-console.log("-------------------------------------------------------------------------------");
-console.log(arr);
-console.log("---------------------------------------------------------------------------------");
+module.exports= {
+  quickSort:quickSort
+};
+// console.log("Before Sorting");
+// console.log("-------------------------------------------------------------------------------");
+// console.log(arr);
+// console.log("---------------------------------------------------------------------------------");
+// quickSort(arr, 0, arr.length - 1);
+// console.log("After Sorting");
+// console.log("-------------------------------------------------------------------------------");
+// console.log(arr);
+// console.log("---------------------------------------------------------------------------------");

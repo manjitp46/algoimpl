@@ -19,7 +19,7 @@ function selectionSort(data) {
 }
 
 var arr = new Array();
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 5; i++) {
   arr[i] = Math.floor(Math.random() * 100);
 }
 
